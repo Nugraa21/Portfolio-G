@@ -7,3 +7,5 @@ export default defineConfig({
   base: '/', // Ubah jika di-deploy di subpath (misalnya, '/subfolder/')
   assetsInclude: ['**/*.glb'],
 })
+
+// Mengkonfigurasi Vit 
