@@ -109,7 +109,7 @@ const Navbar = () => {
               onClick={(e) => navigateAndScroll(e, "#Home")}
               className="text-2xl font-extrabold text-orange-500 tracking-wide"
             >
-              Nugra21
+              Nama kamu
             </Link>
           </div>
 
