@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./index.css";
-import Home from "./Pages/Home.jsx";
-import About from "./Pages/About.jsx";
+// import Home from "./Pages/Home.jsx";
+// import About from "./Pages/About.jsx";
 import AnimatedBackground from "./components/Background.jsx";
 import Navbar from "./components/Navbar.jsx";
-import Portofolio from "./Pages/Portofolio.jsx"; 
 import ContactPage from "./Pages/Contact.jsx";
-import ProjectDetails from "./components/ProjectDetail.jsx";
 import WelcomeScreen from "./Pages/WelcomeScreen.jsx";
-import LoginPage from "./Pages/Login.jsx";
-import Pengalaman from "./components/Pengalaman.jsx";
-import Dashboard from "./Pages/Dashboard.jsx";
 import { AnimatePresence } from 'framer-motion';
 import NotFound from "./NotFound.jsx";
 
@@ -29,10 +24,10 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
           <Navbar />
           <AnimatedBackground />
           <main className="flex flex-col">
-            <Home />
-            <About />
-            <Pengalaman />
-            <Portofolio />
+            {/* <Home /> */}
+            {/* <About /> */}
+            {/* <Pengalaman /> */}
+            {/* <Portofolio /> */}
             <ContactPage />
           </main>
 
@@ -199,13 +194,8 @@ function App() {
             path="/"
             element={<LandingPage showWelcome={showWelcome} setShowWelcome={setShowWelcome} />}
           />
-          <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portofolio />} />
+          {/* <Route path="/about" element={<About />} /> */}
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/pengalaman" element={<Pengalaman />} />
-          <Route path="/project/:id" element={<ProjectPageLayout />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
