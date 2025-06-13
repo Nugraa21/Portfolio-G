@@ -5,7 +5,6 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 const navItems = [
   { href: "#Home", label: "Home" },
   { href: "#About", label: "About" },
-  { href: "#Experience", label: "Experience" },
   { href: "#Portofolio", label: "Portofolio" },
   { href: "#contact", label: "Contact" },
 ];
@@ -64,11 +63,6 @@ const Navbar = () => {
   const navigateAndScroll = (e, href) => {
     e.preventDefault();
 
-    if (href === "/login") {
-      setIsOpen(false);
-      navigate("/login");
-      return;
-    }
 
     const sectionId = href.replace("#", "");
     if (location.pathname !== "/") {
@@ -143,13 +137,6 @@ const Navbar = () => {
               </Link>
             ))}
             {/* kalau mau matikan */}
-            <Link
-              to="/login"
-              onClick={() => setIsOpen(false)}
-              className="px-3 py-2 text-sm font-semibold text-white bg-orange-500 rounded-lg hover:bg-orange-600 transition"
-            >
-              Login
-            </Link>
           </div>
 
           {/* Hamburger Mobile */}
@@ -195,18 +182,6 @@ const Navbar = () => {
             </Link>
           ))}
           {/* Kalau mau matikan */}
-          <Link
-            to="/login"
-            onClick={() => setIsOpen(false)}
-            className="mt-auto px-6 py-4 text-lg font-semibold text-white bg-orange-500 rounded mx-6 mb-8 hover:bg-orange-600 transition"
-            style={{
-              transitionDelay: `${navItems.length * 100}ms`,
-              transform: isOpen ? "translateX(0)" : "translateX(50px)",
-              opacity: isOpen ? 1 : 0,
-            }}
-          >
-            Login
-          </Link>
         </div>
       </div>
     </nav>

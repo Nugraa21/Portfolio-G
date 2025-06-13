@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./index.css";
-// import Home from "./Pages/Home.jsx";
-// import About from "./Pages/About.jsx";
+import Home from "./Pages/Home.jsx";
+import About from "./Pages/About.jsx";
 import AnimatedBackground from "./components/Background.jsx";
 import Navbar from "./components/Navbar.jsx";
+import Portofolio from "./Pages/Portofolio.jsx"
 import ContactPage from "./Pages/Contact.jsx";
 import WelcomeScreen from "./Pages/WelcomeScreen.jsx";
 import { AnimatePresence } from 'framer-motion';
@@ -24,10 +25,9 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
           <Navbar />
           <AnimatedBackground />
           <main className="flex flex-col">
-            {/* <Home /> */}
-            {/* <About /> */}
-            {/* <Pengalaman /> */}
-            {/* <Portofolio /> */}
+            <Home />
+            <About />
+            <Portofolio />
             <ContactPage />
           </main>
 
